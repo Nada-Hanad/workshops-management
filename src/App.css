@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.registration {
+  height: 100vh;
+  width: 100vw;
+  background-color: #a63d40;
+  display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.register-text {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50vw;
+  gap: 48px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.register-text img {
+  height: 300px;
+  width: 300px;
 }
+.register-form {
+  height: 100vh;
+  width: 50vw;
+  background-color: white;
+  border-radius: 24px 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 8px;
+}
+label input,
+select {
+  height: 48px;
+  border: 3px solid #e9b872;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+button {
+  height: 48px;
+  width: 160px;
+  background-color: #a63d40;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dashboard-page {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+.avatar img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 0px 11px -3px rgba(0, 0, 0, 0.58);
+}
+.dashboard-page span {
+  color: #a63d40;
+}
+.workshop-list {
+  height: 70vh;
+  width: 80vw;
+  text-align: start;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.workshop-card {
+  padding: 24px;
+  height: 150px;
+  width: 100%;
+  border-radius: 16px;
+  border: 3px solid #e9b872;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.workshop-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.actions {
+  background-color: #e9b872;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.create-button {
+  align-self: flex-end;
+  margin-right: 10vw;
+}
+.logout {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
+}
+.workshop-details {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+.details {
+  height: 70vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: start;
+}
+.details-table-row {
+  display: flex;
+}
+.cell {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e9b872;
+
+  border-bottom: none;
+}
+.cell:first-child {
+  width: 50%;
+  border-right: none;
+}
+.cell:nth-child(2),
+.cell:last-child {
+  width: 25%;
+}
+.cell:last-child {
+  border-left: none;
+}
+.details-table-row:last-child .cell {
+  border-bottom: 3px solid #e9b872;
+}
+.create-workshop {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+.add-form {
+  text-align: start;
+  height: 60vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.add-form label {
+  width: 80%;
+}
+.date-time {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+.add-form button {
+  margin-top: 48px;
+}
+.register-workshop {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.student-form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
 }
